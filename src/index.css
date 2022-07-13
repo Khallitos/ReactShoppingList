@@ -5,9 +5,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f1f1e6;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.Feedimg{
+
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+
+
+}
+.Profileimg{
+  border-radius: 50%;
+  width: 60px;
+  position:absolute;
+  right: 34%;
+  top: 40%;
+  border:3px solid white;
+;
+
+}
+
+.ProfileBackground{
+  position: relative;
+}
+
+.InputFeed{
+
+  width:90%;
+  height:50%;
+  margin-top:10px;
+  border-radius: 10px;
+}
+
+.FeedPostimg{
+
+  width: 100%;
+  height: 200px;
 }
