@@ -109,7 +109,7 @@ const Feed = () => {
               Delete
             </Button>
             <Button variant="text" startIcon={<CommentIcon />}>
-              Comment
+              Commentss
             </Button>
             <Button variant="text" startIcon={<ShareIcon />}>
               Share

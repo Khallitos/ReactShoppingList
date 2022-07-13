@@ -52,10 +52,10 @@ export const Sidebar = () => {
           </Typography>
         </CardContent>
         <ListItemButton>
-          <ListItemText primary="Who's viewed your profile   36 " />
+          <ListItemText primary="Who's viewed your profile    " />
         </ListItemButton>
         <ListItemButton>
-          <ListItemText primary="Connections         456" />
+          <ListItemText primary="Connections" />
         </ListItemButton>
         <ListItemButton>
           <ListItemText primary="Grow your network" />
