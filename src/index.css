@@ -1,51 +1,52 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f8f1f1e6;
+  background-color: pink;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.Feedimg{
-
+.Feedimg {
   border-radius: 50%;
   width: 56px;
   height: 56px;
-
-
 }
-.Profileimg{
+.Profileimg {
   border-radius: 50%;
   width: 60px;
-  position:absolute;
+  position: absolute;
   right: 34%;
   top: 40%;
-  border:3px solid white;
-;
-
+  border: 3px solid white;
 }
 
-.ProfileBackground{
+.ProfileBackground {
   position: relative;
 }
 
-.InputFeed{
-
-  width:90%;
-  height:50%;
-  margin-top:10px;
+.InputFeed {
+  width: 90%;
+  height: 50%;
+  margin-top: 10px;
   border-radius: 10px;
 }
 
-.FeedPostimg{
-
+.FeedPostimg {
   width: 100%;
   height: 200px;
 }
+.QuizBox {
+  border-radius: "10px solid red";
+  width: "400px";
+  height: "400px";
+  display: "flex";
+  justify-content: "center";
+}
+

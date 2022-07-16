@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Nav, Footer, Sidebar, RightNav, Feed } from "./components";
+import { Nav, Footer, Sidebar, RightNav, Feed, Quiz,Timer } from "./components";
 import { Box, Button, TextField, Stack } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -8,7 +8,7 @@ import SearchIcon from "@mui/icons-material/Search";
 function App() {
   return (
     <Box sx={{ backgroundColor: "" }}>
-      <Nav />
+      {/* <Nav /> */}
 
       <Box
         sx={{
@@ -17,16 +17,19 @@ function App() {
           "@media (max-width: 900px)": {
             paddingX: 0,
           },
-          "@media (min-width:900px) and (max-width:1400px)":{
+          "@media (min-width:900px) and (max-width:1400px)": {
             paddingX: 15,
-          }
+          },
         }}
       >
-        <Stack direction="row" spacing={2} justifyContent="space-between">
+        {/* <Stack direction="row" spacing={2} justifyContent="space-between">
           <Sidebar />
           <Feed />
           <RightNav sx={{}} />
-        </Stack>
+        </Stack> */}
+        {/* <Quiz /> */}
+
+        <Timer/>
       </Box>
     </Box>
   );

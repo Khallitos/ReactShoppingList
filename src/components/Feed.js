@@ -22,7 +22,7 @@ import ShareIcon from "@mui/icons-material/Share";
 const Feed = () => {
   return (
     <Box
-      flex={4}
+      flex={1}
       sx={{ backgroundColor: "white", paddingTop: "0px", marginBottom: "50px" }}
     >
       <Card sx={{ minWidth: 200 }}>
