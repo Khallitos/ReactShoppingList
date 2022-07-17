@@ -14,7 +14,7 @@ import {
 } from "./components";
 import { Box, Button, TextField, Stack } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import NewQuizz from "./components/NewQuizz";
+
 
 // import axios from 'axios';
 
