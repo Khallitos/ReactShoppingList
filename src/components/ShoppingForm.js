@@ -6,6 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import DirectionsIcon from "@mui/icons-material/Directions";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import {
   Box,
   Button,
@@ -21,27 +22,30 @@ import index from "../index.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CheckIcon from "@mui/icons-material/Check";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
-import ListTodo from "./ListTodo";
+import ShoppingList from "./ShoppingList";
 
-const TodoForm = () => {
-  const [todoValue, setTodoValue] = useState("");
-  const [todoArray, setTodoArray] = useState([]);
+const ShoppingForm = () => {
+  const [addItem, setAddItem] = useState("");
+  const [itemList, setItemList] = useState([]);
+  const [counter, setCounter] = useState(0);
 
 
-  const addTodoHandler = (e) => {
+  const addItemHandler = (e) => {
     e.preventDefault();
-    if (todoValue !== "") {
-      setTodoArray([
-        ...todoArray,
-        { id: new Date().getTime().toString(), toDo: todoValue },
-      ]);
-      setTodoValue("");
+    if(addItem !== ""){
+    setItemList([...itemList,
+      { id: new Date().getTime().toString(), item: addItem },
+    ]);
+    setAddItem("");
+    setCounter(counter+1)
 
+  }
+
+    else{
+      alert("enter an Item")
     }
   };
-
-  const clearHandler = () => {}
-
+  console.log({itemList})
   return (
     <Box className="TodolistBox">
       <form>
@@ -56,15 +60,15 @@ const TodoForm = () => {
         >
           <InputBase
             sx={{ ml: 1, flex: 1 }}
-            placeholder="Add a todo to your list"
-            onChange={(e) => setTodoValue(e.target.value)}
-            value={todoValue}
+            placeholder="Add a item"
+            value={addItem}
+            onChange={(e) => setAddItem(e.target.value)}
           />
           <IconButton
             type="submit"
-            onClick={addTodoHandler}
             sx={{ p: "10px" }}
             aria-label="search"
+            onClick={addItemHandler}
           >
             <AddCircleOutlineIcon />
           </IconButton>
@@ -77,23 +81,20 @@ const TodoForm = () => {
           color="initial"
           sx={{ justifyContent: "center" }}
         >
-          Todo list
+          Shopping List
         </Typography>
 
-        {todoArray.map((todolists) => {
-          return (
-            <ListTodo
-              content={todolists.toDo}
-              key={todolists.id}
-              setTodoArray={setTodoArray}
-              todoArray={todoArray}
-              id={todolists.id}
-            />
-          );
+        {itemList.map((items) => {
+          return <ShoppingList key={items.id} items={items.item} counter={counter} setCounter={setCounter}/>;
         })}
+
+        <hr />
+
+        <Typography variant="h5"  sx={{justifyContent:"flex-end",fontSize:"bold "}}>Total: {counter}</Typography>
+
       </Box>
     </Box>
   );
 };
 
-export default TodoForm;
+export default ShoppingForm;

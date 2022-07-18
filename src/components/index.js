@@ -1,9 +1,9 @@
 
-import TodoForm from './TodoForm'
-import ListTodo from './ListTodo'
+import ShoppingList from './ShoppingList'
+import ShoppingForm from './ShoppingForm'
 
 
 
 export{
-    TodoForm,ListTodo
+    ShoppingForm,ShoppingList
 }
